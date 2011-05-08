@@ -1,3 +1,20 @@
+/*
+ * CSS3 Paperstack
+ * See me  : http://kremalicious.com/paperstack
+ * Fork me : https://github.com/kremalicious/paperstack
+ * 
+ * License: 
+ * 
+ * -------------------------------------------------------
+ * 
+ * by Matthias Kretschmann | http://mkretschmann.com
+ * 
+ * -------------------------------------------------------
+ * 
+ * Base styles from HTML5 ✰ Boilerplate
+ *
+*/
+
 /* @group Reset & Minimal Base Styles */
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -95,29 +112,38 @@ input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 5
  */
 
 body, select, input, textarea {
-  font: 16px/24px Georgia;
+  font: 16px/24px Constantia, Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
   color: #a39984;
   text-shadow: 0 1px 0 #fff;
 }
 
 @font-face {
-    font-family: 'Blackout2AM';
-    src: url('fonts/Blackout-2am-webfont.eot');
-    src: url('fonts/Blackout-2am-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Blackout-2am-webfont.woff') format('woff'),
-         url('fonts/Blackout-2am-webfont.ttf') format('truetype'),
-         url('fonts/Blackout-2am-webfont.svg#Blackout2AM') format('svg');
-    font-weight: normal;
+    font-family: 'AllerBold';
+    src: url('fonts/aller_bd-webfont.eot');
+    src: url('fonts/aller_bd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/aller_bd-webfont.woff') format('woff'),
+         url('fonts/aller_bd-webfont.ttf') format('truetype'),
+         url('fonts/aller_bd-webfont.svg#AllerBold') format('svg');
+    font-weight: bold;
     font-style: normal;
 }
 
 h1, h2, h3, h4, h5, h6 { 
 	line-height: 1em;
-	font-family: 'Blackout2AM';
-	color: #7c6e50;
-	color: rgba(111, 95, 63, .7);
+	font-family: 'AllerBold';
+	color: #6f5f3f;
 	text-align: center;
-	font-weight: bold; 
+}
+
+a {
+	color: #487457;
+	text-decoration: none;
+	border-bottom: 1px dotted rgba(72, 116, 87, .3);
+}
+
+a:hover {
+	color: #487457;
+	border-bottom: 1px dotted rgba(72, 116, 87, .6);
 }
 
 ::-moz-selection{ background: #7c6e50; color:#fff; text-shadow: none; }
@@ -131,14 +157,10 @@ h1, h2, h3, h4, h5, h6 {
 
 html {
 	background: #e6e6e6 url(texture.png) repeat left top;
-	padding: 10px;
+	padding: 1% 5%;
 }
 
 body {
-	max-width: 720px;
-	min-width: 240px;
-	padding: 0 20px;
-	margin: 30px auto;
 	
 }
 
@@ -153,7 +175,9 @@ article p {
 }
 
 #main {
-	
+	max-width: 640px;
+	min-width: 240px;
+	margin: 30px auto;
 }
 
 #main > header {
@@ -187,6 +211,7 @@ article p {
 
 	#main > header h1 {
 		font-size: 4em;
+		margin-bottom: .2em;
 	}
 	
 	#main > header p {
@@ -196,11 +221,26 @@ article p {
 #main > footer {
 	text-align: center;
 	margin-top: 2em;
+	padding-top: 1em;
+	border-top: 3px double #d3cab7;
+	position: relative;
 }
 
-/* One class to rule all paperstacks */
+	#main > footer:before {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: -2px;
+		border-top: 3px double #fff;
+	}
+
+/* ONE CLASS TO RULE ALL PAPER STACKS */
 
 .paperstack {
+	padding: 4% 8%;
 	position: relative;
 	background: #f4f2ee;
 	background: -moz-linear-gradient(top, #F4F0E7 0%, #F4F2EE 15%, #F4F2EE 85%, #F4F0E7 100%);
@@ -210,7 +250,7 @@ article p {
 	background: -ms-linear-gradient(top, #F4F0E7 0%,#F4F2EE 15%,#F4F2EE 85%,#F4F0E7 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F4F0E7', endColorstr='#F4F0E7',GradientType=0 );
 	background: linear-gradient(top, #F4F0E7 0%,#F4F2EE 15%,#F4F2EE 85%,#F4F0E7 100%);
-	padding: 8%;
+	
 	border: 1px solid #deddd9;
 	-webkit-box-shadow: 0 0 4px rgba(0,0,0,.1);
 	-moz-box-shadow: 0 0 4px rgba(0,0,0,.1);
@@ -250,6 +290,58 @@ article p {
 		-o-transform: rotate(4deg);
 		transform: rotate(4deg);
 	}
+/* END PAPER STACKS */
+
+.button {
+	display: inline-block;
+	position: relative;
+	padding: 1% 3%;
+	margin: 2em 0;
+	color: #cfd1d0;
+	font-family: 'AllerBold';
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.8);
+	background: #487457;
+	background: -moz-linear-gradient(top, #518363 0%, #487457 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#518363), color-stop(100%,#487457));
+	background: -webkit-linear-gradient(top, #518363 0%,#487457 100%);
+	background: -o-linear-gradient(top, #518363 0%,#487457 100%);
+	background: -ms-linear-gradient(top, #518363 0%,#487457 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#518363', endColorstr='#487457',GradientType=0 );
+	background: linear-gradient(top, #518363 0%,#487457 100%);
+	width: 43%;
+	border: 1px solid #213328;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	-webkit-box-shadow:  0 1px 3px rgba(0,0,0,.4);
+	-moz-box-shadow:  0 1px 3px rgba(0,0,0,.4);
+	box-shadow:  0 1px 3px rgba(0,0,0,.4);
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+	.button:before {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		border-top: 1px solid rgba(255,255,255,.5);
+		-webkit-border-radius: 7px;
+		-moz-border-radius: 7px;
+		border-radius: 7px;
+	}
+
+.button:hover {
+	color: #fff;
+	border: 1px solid #213328;
+}
 
 /* @group Non-semantic helper classes */
 
