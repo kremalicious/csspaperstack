@@ -135,7 +135,7 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 }
 
-a {
+a, a:active, a:visited {
 	color: #487457;
 	text-decoration: none;
 	border-bottom: 1px dotted rgba(72, 116, 87, .3);
@@ -299,7 +299,7 @@ article p {
 	}
 /* END PAPER STACKS */
 
-.button {
+.button, .button:visited {
 	display: inline-block;
 	position: relative;
 	padding: 1% 3%;
