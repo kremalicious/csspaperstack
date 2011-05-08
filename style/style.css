@@ -135,7 +135,15 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 }
 
+<<<<<<< HEAD
 a, a:active, a:visited {
+=======
+<<<<<<< HEAD
+a, a:active, a:visited {
+=======
+a,a:visited {
+>>>>>>> 4fc524b34ccf316b61e2d5af808c1e0e3ddabb0e
+>>>>>>> 1264ba1c81161e322db86eda636725dba7309e91
 	color: #487457;
 	text-decoration: none;
 	border-bottom: 1px dotted rgba(72, 116, 87, .3);
