@@ -242,6 +242,12 @@ article p {
 .paperstack {
 	padding: 4% 8%;
 	position: relative;
+}
+
+/* Paper background */
+.paperstack,
+.paperstack:before,
+.paperstack:after {
 	background: #f4f2ee;
 	background: -moz-linear-gradient(top, #F4F0E7 0%, #F4F2EE 15%, #F4F2EE 85%, #F4F0E7 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F4F0E7), color-stop(15%,#F4F2EE), color-stop(85%,#F4F2EE), color-stop(100%,#F4F0E7));
@@ -250,13 +256,12 @@ article p {
 	background: -ms-linear-gradient(top, #F4F0E7 0%,#F4F2EE 15%,#F4F2EE 85%,#F4F0E7 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F4F0E7', endColorstr='#F4F0E7',GradientType=0 );
 	background: linear-gradient(top, #F4F0E7 0%,#F4F2EE 15%,#F4F2EE 85%,#F4F0E7 100%);
-	
 	border: 1px solid #deddd9;
-	-webkit-box-shadow: 0 0 4px rgba(0,0,0,.1);
-	-moz-box-shadow: 0 0 4px rgba(0,0,0,.1);
-	box-shadow: 0 0 4px rgba(0,0,0,.1);
+	-webkit-box-shadow: 0 0 4px rgba(0,0,0,.05);
+	-moz-box-shadow: 0 0 4px rgba(0,0,0,.05);
+	box-shadow: 0 0 4px rgba(0,0,0,.05);
 }
-	
+	/* inject full width/height pseudo elements */
 	.paperstack:before,
 	.paperstack:after {
 		content: "";
@@ -264,31 +269,33 @@ article p {
 		width: 100%;
 		height: 100%;
 		position: absolute;
-		left: -0.5%;
 		top: 0;
-		z-index: -1;
-		background: #f4f2ee;
-		border: 1px solid #deddd9;
-		-webkit-box-shadow: 0 0 3px rgba(0,0,0,.05);
-		-moz-box-shadow: 0 0 3px rgba(0,0,0,.05);
-		box-shadow: 0 0 3px rgba(0,0,0,.05);
 	}
 	
+	/* Start the individual pseudo elements
+	 * Good elements to play with:
+	 * - width
+	 * - height
+	 * - left/right
+	 * - transform
+	 */
 	.paperstack:before {
+		left: -0.5%; /*drag it slightly to the left*/
 		-webkit-transform: rotate(2deg);
 		-moz-transform: rotate(2deg);
 		-o-transform: rotate(2deg);
 		transform: rotate(2deg);
+		z-index: -1; /*positioning behind the main content, positive values won't work*/
 	}
 	
 	.paperstack:after {
-		z-index: -2;
-		left: 0.7%;
 		width: 99.6%;
+		left: 0.7%; /*push it slightly from the left*/
 		-webkit-transform: rotate(4deg);
 		-moz-transform: rotate(4deg);
 		-o-transform: rotate(4deg);
 		transform: rotate(4deg);
+		z-index: -2; /*positioning behind the :before element*/
 	}
 /* END PAPER STACKS */
 
