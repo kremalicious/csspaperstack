@@ -257,9 +257,9 @@ article p {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F4F0E7', endColorstr='#F4F0E7',GradientType=0 );
 	background: linear-gradient(top, #F4F0E7 0%,#F4F2EE 15%,#F4F2EE 85%,#F4F0E7 100%);
 	border: 1px solid #deddd9;
-	-webkit-box-shadow: 0 0 4px rgba(0,0,0,.05);
-	-moz-box-shadow: 0 0 4px rgba(0,0,0,.05);
-	box-shadow: 0 0 4px rgba(0,0,0,.05);
+	-webkit-box-shadow: 0 0 4px rgba(0,0,0,.08);
+	-moz-box-shadow: 0 0 4px rgba(0,0,0,.08);
+	box-shadow: 0 0 4px rgba(0,0,0,.08);
 }
 	/* inject full width/height pseudo elements */
 	.paperstack:before,
