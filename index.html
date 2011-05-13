@@ -38,18 +38,31 @@
 			
 			<h1>How It Works</h1>
 			
-			<p>The main work is done with a combination of everyone's favorite CSS pseudo elements :before/:after <span class="amp">&amp;</span> CSS transforms. No additional markup elements are required.</p>
+			<p>The main work is done with a combination of everyone's favorite CSS pseudo elements :before/:after <span class="amp">&amp;</span> CSS transforms. No additional markup elements are required. Placing the pseudo elements behind the content of the element they're injected on is achieved by utilising negative z-index values.</p>
 			
 			<p>The css uses relative values a lot so the paper stacks will resize proportionally depending on the screen size and wrapper css.</p>
-
+			
+			<p>All you have to do is include the .paperstack css rules <span class="amp">&amp;</span> give your content wrapper this class.</p>
+			
+			<h1>Within Content</h1>
+						
+			<section>
+			
+				<article class="paperstack">
+					<p>By adjusting z-index this works within content too.</p>
+				</article>
+				
+				<article class="paperstack">
+					<p>And it will automatically grow or shrink depending on the content placed within so this sentence could really be long without destroying the stacks</p>
+				</article>
+				
+			</section>
 						
 			<h1>Browser Support</h1>
 			
 			<p>This demo should work in all modern browsers including IE9. While IE8 understands pseudo elements it won't display CSS transforms.</p>
 			
-			<h1>Use Me, Fork Me</h1>
-			
-			<p>All you have to do is include the .paperstack css rules <span class="amp">&amp;</span> give your content wrapper this class.</p>
+			<h1>Use Me, Fork Me</h1>			
 			
 			<p>You can <a href="style/style.css">use the css</a> right away or fork this little site along with the css file <a href="https://github.com/kremalicious/csspaperstack">on Github</a>.</p>
 			
@@ -58,7 +71,7 @@
 		</article>
 		
 		<footer>
-			<p><small>A small experiment by <a href="http://matthiaskretschmann.com">matthias kretschmann</a> | <a href="https.//twitter.com/kremalicious">@kremalicious</a></small></p>
+			<p><small>A small experiment by <a href="http://matthiaskretschmann.com">matthias kretschmann</a> | <a href="https://twitter.com/kremalicious">@kremalicious</a></small></p>
 		</footer>
 
 	</div>
